@@ -43,16 +43,16 @@ void Hostd::onAwake() {
 
 int Hostd::readConfig() {
     HostdConfig* config = &this->config;
-    if(!this->coord->config->Get("HOSTD", "port", config->Port)) {
+    if(!this->coord->Config->Get("HOSTD", "port", config->Port)) {
         return -1;
     }
-    if(!this->coord->config->Get("HOSTD", "host", config->Host)) {
+    if(!this->coord->Config->Get("HOSTD", "host", config->Host)) {
         return -1;
     }
-    if(!this->coord->config->Get("HOSTD", "user", config->User)) {
+    if(!this->coord->Config->Get("HOSTD", "user", config->User)) {
         return -1;
     }
-    if(!this->coord->config->Get("HOSTD", "password", config->Password)) {
+    if(!this->coord->Config->Get("HOSTD", "password", config->Password)) {
         return -1;
     }
 
